@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B69678A2D026C5F007188C7 /* Coding Clicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Coding Clicker.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0BB00AA32CDDBA32008B34D3 /* Coding Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coding Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB00ABC2CDDBA33008B34D3 /* Coding ClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coding ClickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB00AC62CDDBA34008B34D3 /* Coding ClickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coding ClickerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,9 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B6967A82D026E8B007188C7 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0BB00A9A2CDDBA32008B34D3 = {
 			isa = PBXGroup;
 			children = (
+				0B69678A2D026C5F007188C7 /* Coding Clicker.xcodeproj */,
 				0BB00AA52CDDBA32008B34D3 /* Coding Clicker */,
 				0BB00ABF2CDDBA33008B34D3 /* Coding ClickerTests */,
 				0BB00AC92CDDBA34008B34D3 /* Coding ClickerUITests */,
@@ -226,6 +233,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0BB00AA42CDDBA32008B34D3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0B6967A82D026E8B007188C7 /* Products */;
+					ProjectRef = 0B69678A2D026C5F007188C7 /* Coding Clicker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0BB00AA22CDDBA32008B34D3 /* Coding Clicker */,

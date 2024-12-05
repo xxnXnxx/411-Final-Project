@@ -4,12 +4,13 @@
 //
 //  Created by Bradley De Boer on 11/7/24.
 //
-
+import SwiftUI
 import UIKit
 import SpriteKit
 
 class ViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,13 +28,13 @@ class ViewController: UIViewController {
     var exp = 0.0
     var multiplier = 1.0
     
-    //this function registers the click on button and increses the exp count accordingly and calls the updateExpCount() function to display the updated exp count on the ui label
+    //this function registers the click on button and increases the exp count accordingly and calls the updateExpCount() function to display the updated exp count on the ui label
     @IBAction func Main_Clicker(_ sender: Any) {
         exp += 1 * multiplier
         updateExpCount(label: Exp_Count_Display)
         
         //if chain will change the background color at certain intervals of exp
-        if exp == 1000{
+        if exp == 10{
             view.backgroundColor = .yellow
             Upgrade_Menu_Ui_View.backgroundColor = .yellow
         }
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
             Upgrade_Menu_Ui_View.backgroundColor = .blue
         }
     }
+    
     
     
     
@@ -154,4 +156,5 @@ class ViewController: UIViewController {
                 }, completion: nil)
             }
         }
+
 }

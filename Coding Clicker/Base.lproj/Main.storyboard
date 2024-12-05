@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cute-programming-code-desktop-p2qkpztda30om5ws" translatesAutoresizingMaskIntoConstraints="NO" id="JjI-Zo-GB0">
+                                <rect key="frame" x="-707" y="-836" width="1808" height="2527"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6J-h6-MVY">
                                 <rect key="frame" x="95" y="318" width="203" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,8 +160,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="120" height="120"/>
+        <image name="Image" width="170.66667175292969" height="170.66667175292969"/>
         <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="cute-programming-code-desktop-p2qkpztda30om5ws" width="1920" height="1200"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="triangle.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">

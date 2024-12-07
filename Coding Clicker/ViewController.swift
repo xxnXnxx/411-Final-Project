@@ -6,10 +6,12 @@
 //
 import SwiftUI
 import UIKit
-import SpriteKit
+import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController {
     
+    var AudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +42,26 @@ class ViewController: UIViewController {
         //flip top triangles to make background for exp display
         expDisplay1.transform = CGAffineTransform(scaleX: 1, y: -1)
         expDisplay2.transform = CGAffineTransform(scaleX:1, y: -1)
+        
+        //play background music
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "bg_music", ofType: "mp3")!)
+                AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+                AudioPlayer.prepareToPlay()
+                AudioPlayer.numberOfLoops = -1
+                AudioPlayer.play()
+        
     }
+    
+    // part of background music playing
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     
     @IBOutlet weak var expDisplay1: UIImageView!
     
     @IBOutlet weak var expDisplay2: UIImageView!
+    
     //This variable is the total exp counter
     var exp = 0.0
     var multiplier = 1.0
@@ -55,30 +72,32 @@ class ViewController: UIViewController {
         updateExpCount(label: Exp_Count_Display)
         
         //if chain will change the background color at certain intervals of exp
-        if exp >= 100{
-            view.backgroundColor = .yellow
+        if exp >= 1000{
             Upgrade_Menu_Ui_View.backgroundColor = .yellow
         }
-        if exp >= 100000{
-            view.backgroundColor = .blue
+        if exp >= 10000{
             Upgrade_Menu_Ui_View.backgroundColor = .blue
         }
-        if exp >= 20000{
-            view.backgroundColor = .green
+        if exp >= 50000{
             Upgrade_Menu_Ui_View.backgroundColor = .green
         }
-        if exp >= 500000{
-            view.backgroundColor = .black
+        if exp >= 100000{
             Upgrade_Menu_Ui_View.backgroundColor = .black
         }
-        if exp >= 1000000{
-            view.backgroundColor = .red
+        if exp >= 250000{
             Upgrade_Menu_Ui_View.backgroundColor = .red
         }
-        if exp >= 1500000{
-            view.backgroundColor = .blue
-            Upgrade_Menu_Ui_View.backgroundColor = .blue
+        if exp >= 500000{
+            Upgrade_Menu_Ui_View.backgroundColor = .purple
         }
+        if exp >= 1000000{
+
+            Upgrade_Menu_Ui_View.backgroundColor = .white
+        }
+        
+        // button will makes sounds/vibration every click
+        AudioServicesPlaySystemSound(SystemSoundID(1333))//telegraph sound
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))//vibrate
     }
     
     

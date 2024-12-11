@@ -72,26 +72,32 @@ class ViewController: UIViewController {
         updateExpCount(label: Exp_Count_Display)
         
         //if chain will change the background color at certain intervals of exp
-        if exp >= 1000{
+        if exp >= 10{
+            view.backgroundColor = .yellow
             Upgrade_Menu_Ui_View.backgroundColor = .yellow
         }
         if exp >= 10000{
+            view.backgroundColor = .blue
             Upgrade_Menu_Ui_View.backgroundColor = .blue
         }
         if exp >= 50000{
+            view.backgroundColor = .green
             Upgrade_Menu_Ui_View.backgroundColor = .green
         }
         if exp >= 100000{
+            view.backgroundColor = .black
             Upgrade_Menu_Ui_View.backgroundColor = .black
         }
         if exp >= 250000{
+            view.backgroundColor = .red
             Upgrade_Menu_Ui_View.backgroundColor = .red
         }
         if exp >= 500000{
+            view.backgroundColor = .purple
             Upgrade_Menu_Ui_View.backgroundColor = .purple
         }
         if exp >= 1000000{
-
+            view.backgroundColor = .white
             Upgrade_Menu_Ui_View.backgroundColor = .white
         }
         

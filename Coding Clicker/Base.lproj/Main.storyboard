@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cute-programming-code-desktop-p2qkpztda30om5ws" translatesAutoresizingMaskIntoConstraints="NO" id="JjI-Zo-GB0">
-                                <rect key="frame" x="-82" y="110" width="567" height="189"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="tuv-TG-vvh">
+                                <rect key="frame" x="-91" y="59" width="580" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6J-h6-MVY">
-                                <rect key="frame" x="95" y="318" width="203" height="324"/>
+                                <rect key="frame" x="93" y="343" width="203" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="laptop" title=""/>
@@ -29,58 +29,34 @@
                                     <action selector="Main_Clicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLC-DH-e3d"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-R9-Wib">
-                                <rect key="frame" x="168" y="4.3333333333333144" width="105" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-gH-CgR">
-                                <rect key="frame" x="129" y="4.3333333333333144" width="105" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-4f-gtW">
-                                <rect key="frame" x="148" y="49" width="103" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-O5-tC8">
-                                <rect key="frame" x="139" y="50" width="121" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-QO-IIg">
-                                <rect key="frame" x="41" y="764.33333333333337" width="112" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tA6-Mm-daK">
-                                <rect key="frame" x="242" y="764" width="112" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcd-Ec-ao3">
-                                <rect key="frame" x="93" y="783" width="205" height="69"/>
+                                <rect key="frame" x="130" y="686" width="130" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Upgrades"/>
+                                <buttonConfiguration key="configuration" style="plain" image="14018649"/>
                                 <connections>
                                     <action selector="Upgrade_Menu_Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddg-zw-uwh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-O5-tC8">
+                                <rect key="frame" x="139" y="166" width="121" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-J1-6Qv">
                                 <rect key="frame" x="15" y="59" width="361" height="759"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0A-i8-arE">
-                                        <rect key="frame" x="298" y="0.0" width="63" height="55"/>
+                                        <rect key="frame" x="298" y="0.0" width="63" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system" title="" imagePadding="0.0">
+                                            <backgroundConfiguration key="background"/>
+                                            <attributedString key="attributedSubtitle"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="Close_Upgrade_Menu_Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnJ-go-TjM"/>
                                         </connections>
@@ -217,8 +193,6 @@
                         <outlet property="Upgrade_1_Cost" destination="JRd-c6-RcK" id="gb0-VZ-JAC"/>
                         <outlet property="Upgrade_Menu_Exp" destination="C0j-o6-oFP" id="seJ-5h-dgA"/>
                         <outlet property="Upgrade_Menu_Ui_View" destination="z7c-J1-6Qv" id="Cx9-tF-fhG"/>
-                        <outlet property="expDisplay1" destination="ZMM-gH-CgR" id="FyX-sG-EDp"/>
-                        <outlet property="expDisplay2" destination="1XS-R9-Wib" id="f5l-Iy-7H2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -227,11 +201,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="cute-programming-code-desktop-p2qkpztda30om5ws" width="436.33334350585938" height="326.66665649414062"/>
+        <image name="14018649" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="cloud" width="436.33334350585938" height="326.66665649414062"/>
         <image name="laptop" width="360" height="360"/>
-        <image name="rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="triangle.fill" catalog="system" width="128" height="109"/>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

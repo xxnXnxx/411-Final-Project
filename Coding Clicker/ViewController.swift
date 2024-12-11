@@ -40,8 +40,8 @@ class ViewController: UIViewController {
         
         
         //flip top triangles to make background for exp display
-        expDisplay1.transform = CGAffineTransform(scaleX: 1, y: -1)
-        expDisplay2.transform = CGAffineTransform(scaleX:1, y: -1)
+//        expDisplay1.transform = CGAffineTransform(scaleX: 1, y: -1)
+//        expDisplay2.transform = CGAffineTransform(scaleX:1, y: -1)
         
         //play background music
         let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "bg_music", ofType: "mp3")!)
@@ -49,7 +49,6 @@ class ViewController: UIViewController {
                 AudioPlayer.prepareToPlay()
                 AudioPlayer.numberOfLoops = -1
                 AudioPlayer.play()
-        
     }
     
     // part of background music playing
@@ -118,7 +117,8 @@ class ViewController: UIViewController {
     
     
     //Function for the button that closes the upgrade menu
-    @IBAction func Close_Upgrade_Menu_Button(_ sender: Any) {
+    @IBAction func
+    Close_Upgrade_Menu_Button(_ sender: Any) {
         Upgrade_Menu_Ui_View.isHidden.toggle()
         Upgrade_Menu_Exp.isHidden.toggle()
     }

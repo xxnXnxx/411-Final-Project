@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         //updates upgrade 2 quantity label in menu
         updateQuantityLabelUpgrade2(label: Upgrade2Quantity, quantity: Int(upgrade2quantity))
         
+        //updates upgrade 3 information (Algo Upgrade)
+        updateCostLabel(label: AlgorithmCost, price: AlgoCost)
+        updateQuantityLabelUpgrade1(label: AlgorithmQuantity, quantity: Int(AlgoQuantity))
         
         
         //hides the cannot afford upgrade label
@@ -143,7 +146,7 @@ class ViewController: UIViewController {
     
     
     //first upgrade available, upgrades words per minute ie increases exp multiplier
-    var upgrade1multiplier = 1.0
+    var upgrade1multiplier = 1.15
     var upgrade1Cost = 10.0
     var upgrade1quantity = 0
     
@@ -153,8 +156,9 @@ class ViewController: UIViewController {
     @IBAction func Upgrade1WPMBoost(_ sender: Any) {
 
         //flashes the maxamountreach label on screen when user has purchased upgrade 1 10 times
-        if (upgrade1quantity == 10) {
-            fadeInAndOut(label: MaxAmountReached)
+        if (upgrade1quantity == 9) {
+            fadeInAndOut(label: MaxAmountReached, costLabel: Upgrade_1_Cost)
+            updateQuantityLabelUpgrade1(label: Upgrade1Quantity, quantity: 10)
         }
         else if (Int(exp) >= Int(upgrade1Cost) && upgrade1quantity < 10) {
             exp -= upgrade1Cost
@@ -165,21 +169,20 @@ class ViewController: UIViewController {
             updateExpCount(label: Exp_Count_Display)
             updateQuantityLabelUpgrade1(label: Upgrade1Quantity, quantity: upgrade1quantity)
             
-            multiplier += 0.25
-            upgrade1multiplier *= 1.23
+            multiplier += 1
+            upgrade1Cost *= 1.15
             
-            upgrade1Cost = upgrade1Cost * upgrade1multiplier
             updateCostLabel(label: Upgrade_1_Cost, price: upgrade1Cost)
         }
         else if (Int(exp) < Int(upgrade1Cost)){
-            fadeInAndOut(label: CannotAffordUpgradeLabel)
+            fadeInAndOut(label: CannotAffordUpgradeLabel, costLabel: Upgrade_1_Cost)
         }
     }
     
     
     //upgrade 2 (intern upgrade) member variables
     var upgrade2quantity = 0.0
-    var upgrade2cost = 100.0
+    var upgrade2cost = 1000.0
     var ownsUpgrade2 = false
     
    
@@ -188,14 +191,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var Upgrade2Quantity: UILabel!
     
     @IBAction func HireInternsUpgrade(_ sender: Any) {
-        if (upgrade2quantity == 5) {
-            fadeInAndOut(label: MaxAmountReached)
+        if (upgrade2quantity == 4) {
+            fadeInAndOut(label: MaxAmountReached, costLabel: Upgrade2Cost)
+            updateQuantityLabelUpgrade2(label: Upgrade2Quantity, quantity: 5)
         }
         else if (Int(exp) >= Int(upgrade2cost) && upgrade2quantity < 5) {
             exp -= upgrade2cost
             upgrade2quantity += 1
             ownsUpgrade2 = true
-            upgrade2cost += 100
+            upgrade2cost *= 1.35
             //updates cost in menu
             updateCostLabel(label: Upgrade2Cost, price: upgrade2cost)
             
@@ -207,18 +211,47 @@ class ViewController: UIViewController {
             Task {
                 while ownsUpgrade2 {
                     try await Task.sleep(nanoseconds: 2_000_000_000)  // 2 seconds
-                    exp += 1 * upgrade2quantity
+                    exp += 2 * upgrade2quantity
                     updateExpCountInUpgradeMenu(label: Upgrade_Menu_Exp)
                     updateExpCount(label: Exp_Count_Display)
                 }
             }
         }
         else if (Int(exp) < Int(upgrade2cost)){
-            fadeInAndOut(label: CannotAffordUpgradeLabel)
+            fadeInAndOut(label: CannotAffordUpgradeLabel, costLabel: Upgrade2Cost)
         }
     }
     
     
+    var AlgoCost = 100.0
+    var AlgoQuantity = 0
+    
+
+    @IBOutlet weak var AlgorithmCost: UILabel!
+    
+    @IBOutlet weak var AlgorithmQuantity: UILabel!
+    
+    @IBAction func AlgorithmUpgrade(_ sender: Any) {
+        if (AlgoQuantity == 9) {
+            fadeInAndOut(label: MaxAmountReached, costLabel: AlgorithmCost)
+            updateQuantityLabelUpgrade1(label: AlgorithmQuantity, quantity: 10)
+        }
+        else if (Int(exp) >= Int(AlgoCost) && AlgoQuantity < 10) {
+            exp -= AlgoCost
+            AlgoQuantity += 1
+            AlgoCost *= 1.25
+            multiplier += 1.2
+                
+            //updates all necessary information after purhcasing the upgrade
+            updateCostLabel(label: AlgorithmCost, price: AlgoCost)
+            updateExpCountInUpgradeMenu(label: Upgrade_Menu_Exp)
+            updateExpCount(label: Exp_Count_Display)
+            updateQuantityLabelUpgrade1(label: AlgorithmQuantity, quantity: Int(AlgoQuantity))
+        }
+        else if (Int(exp) < Int(AlgoCost)){
+            fadeInAndOut(label: CannotAffordUpgradeLabel, costLabel: AlgorithmCost)
+        }
+    }
     
     
     
@@ -240,8 +273,14 @@ class ViewController: UIViewController {
     
     //this function will update each cost label with the new associated cost for each upgrade
     func updateCostLabel (label: UILabel, price: Double) {
-        label.text = "\(Int(price))"
-        label.textAlignment = .center
+        if (price == 0.0) {
+            label.text = "--"
+            label.textAlignment = .center
+        }
+        else {
+            label.text = "\(Int(price))"
+            label.textAlignment = .center
+        }
     }
     
     //this function updates the quantity labels for upgrade 1 (wpm)
@@ -256,7 +295,12 @@ class ViewController: UIViewController {
     }
 
     //allows a UILabel to fade in and out of the scene
-    func fadeInAndOut(label: UILabel) {
+    func fadeInAndOut(label: UILabel, costLabel: UILabel? = nil) {
+        if (label == MaxAmountReached) {
+            if let costLabel = costLabel {
+                updateCostLabel(label: costLabel, price: 0.0)
+            }
+        }
             // Fade in
             UIView.animate(withDuration: 1.0, animations: {
                 label.alpha = 1.0 // Fully visible

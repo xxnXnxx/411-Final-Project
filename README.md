@@ -12,7 +12,7 @@
   - **Code Compiler**: Increases the EXP multiplier.
   - **Interns**: Generates passive EXP over time.
   - **Algorithm Optimizer**: Increases the EXP multiplier with an algorithm-based upgrade.
-  - **Stack Overflow**: Increase the EXP multiplier significantly
+  - **Stack Overflow**: Increase the EXP multiplier significantly.
 - **EXP Display**: The player's EXP is displayed on the main screen and is updated as the player earns EXP.
 - **Upgrade Menu**: The upgrade menu allows players to spend EXP to buy upgrades that improve the game's performance or provide passive bonuses.
 
@@ -27,7 +27,7 @@
 1. Click on the laptop button to generate EXP.
 2. Open the upgrade menu (bottom button) to purchase upgrades using the EXP you've earned.
 3. Each upgrade improves the rate at which you generate EXP, either by increasing your multiplier or by adding passive sources of EXP ("Hire Interns!" Upgrade).
-4. As you accumulate more EXP, the background color will change to indicate your progress at predetermined intervals (100,1000,5000,100000,etc.)
+4. As you accumulate more EXP, the background color will change to indicate your progress at predetermined intervals (100,1000,5000,100000,etc.).
 
 ## Technical Packages
 

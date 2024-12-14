@@ -11,11 +11,11 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     //Properties
-    
+    s
     @IBOutlet weak var MenuView: UIView!
     
     // EXP Counter Variable and Mutator
-    var exp = 100000000.0
+    var exp = 0.0
     var multiplier = 1.0
 
     //first upgrade's associated variables, upgrades words per minute ie increases exp multiplier
@@ -319,7 +319,7 @@ class ViewController: UIViewController {
             }, completion: nil)
         }
     }
-    //very similar function but with a faster fade in fade out time
+    //very similar function but with a faster fade in fade out time for the "+1" that apperas around the button on tap
     func fadeInAndOutPlusOneLabel (label: UILabel, costLabel: UILabel? = nil) {
         UIView.animate(withDuration: 0.5, animations: {
             label.alpha = 1.0

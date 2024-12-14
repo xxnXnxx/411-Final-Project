@@ -10,7 +10,7 @@
 - **Objective**: The goal of our game is to accumulate experience points (EXP) by clicking on the laptop icon. The player can use this EXP to purchase upgrades, each improving the player's EXP multiplier or adding passive income sources like interns.
 - **Upgrades**:
   - **Code Compiler**: Increases the EXP multiplier.
-  - **Interns**: Generates passive EXP over time.
+  - **Hire Interns!**: Generates passive EXP over time.
   - **Algorithm Optimizer**: Increases the EXP multiplier with an algorithm-based upgrade.
   - **Stack Overflow**: Increase the EXP multiplier significantly.
 - **EXP Display**: The player's EXP is displayed on the main screen and is updated as the player earns EXP.

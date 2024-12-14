@@ -27,7 +27,7 @@
 1. Click on the laptop button to generate EXP.
 2. Open the upgrade menu (bottom button) to purchase upgrades using the EXP you've earned.
 3. Each upgrade improves the rate at which you generate EXP, either by increasing your multiplier or by adding passive sources of EXP ("Hire Interns!" Upgrade).
-4. As you accumulate more EXP, the background color will change to indicate your progress at predetermined intervals some of which are,  100, 1000, 5000, etc. If a players EXP drops below one of these intervals, from purchasing upgrades, the background color will change according to the current EXP.
+4. As you accumulate more EXP the background color will change to indicate your progress at predetermined intervals, some of which are  100, 1000, 5000, etc. If a players EXP drops below one of these intervals, from purchasing upgrades, the background color will change according to the current EXP value.
 
 ## Technical Packages
 

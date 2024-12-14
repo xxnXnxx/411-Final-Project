@@ -1,8 +1,6 @@
 # Lappy Smash
+**Author's Name**: Bradley De Boer  | Ian Gabriel Vista
 
-## Author Information
-
-**Author Name**: Bradley De Boer  | Ian Gabriel Vista
 **Email**: bradleydeboer@csu.fullerton.edu | vistaiangabriel@csu.fullerton.edu
 
 ## Game Mechanics

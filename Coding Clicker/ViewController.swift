@@ -10,10 +10,6 @@ import AVFoundation
 import AudioToolbox
 
 class ViewController: UIViewController {
-    //Properties
-    s
-    @IBOutlet weak var MenuView: UIView!
-    
     // EXP Counter Variable and Mutator
     var exp = 0.0
     var multiplier = 1.0
@@ -39,6 +35,8 @@ class ViewController: UIViewController {
     // Audio player
     var AudioPlayer = AVAudioPlayer()
     
+    //Properties
+    @IBOutlet weak var MenuView: UIView!
     //Outlets
     @IBOutlet weak var MainButton: UIButton!
     @IBOutlet weak var expDisplay1: UIImageView!
@@ -65,9 +63,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var Exp_Count_Display: UILabel!
     //upgrade menu UI View variable
     @IBOutlet weak var Upgrade_Menu_Ui_View: UIView!
-    //uiLabel for when the user cannot afford the upgrade
-
-    // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,16 +92,17 @@ class ViewController: UIViewController {
         fadeInAndOut(label: MaxAmountReached)
 
         // Play background music
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "bg_music", ofType: "mp3")!)
-        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
-        AudioPlayer.prepareToPlay()
-        AudioPlayer.numberOfLoops = -1
-        AudioPlayer.play()
+        let musicURL = Bundle.main.url(forResource: "bg_music", withExtension: "mp3")!
+            AudioPlayer = try! AVAudioPlayer(contentsOf: musicURL)
+            AudioPlayer.prepareToPlay()
+            AudioPlayer.numberOfLoops = -1
+            AudioPlayer.play()
+                
+            // Register for app lifecycle notifications
+            NotificationCenter.default.addObserver(self, selector: #selector(pauseMusic), name: UIApplication.willResignActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(playMusic), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
     
     //This function registers the click on button and increases the exp count accordingly and calls the updateExpCount() function to display the updated exp count on the ui label
     @IBAction func Main_Clicker(_ sender: Any) {
@@ -269,10 +265,28 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
+    //Background Music Settings
+    deinit {
+            NotificationCenter.default.removeObserver(self)
+    }
+        
+    // Pause music when app is inactive
+    @objc func pauseMusic() {
+        if AudioPlayer.isPlaying {
+            AudioPlayer.pause()
+        }
+    }
+        
+    // Resume music when app is active again
+    @objc func playMusic() {
+        if !AudioPlayer.isPlaying {
+            AudioPlayer.play()
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
     // Helper Methods
     //This function will update the text that is on the ui label whenever the button is clicked
